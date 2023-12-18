@@ -1,0 +1,52 @@
+Most of the Matplotlib utilities lies under the pyplot submodule, and are usually imported under the plt alias:
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+xpoints = np.array([0, 6])
+ypoints = np.array([0, 100])
+
+//plot() function is used to plot the points on x and y axes
+plt.plot(xpoints, ypoints)
+
+//show() function is used to show the graph
+plt.show()
+
+xpts = np.array([1, 10])
+ypts = np.array([2, 10])
+plt.plot(xpts, ypts, 'o') // plot two pts at (1, 2) and (10, 10)
+
+//if we do not specify the xpts or ypts then it will take the default value
+// 0, 1, 2, 3, ......
+
+// 'marker' keyword is used to emphasize each point with a marker
+plt.plot(ypts, marker='o')
+
+//marker|line|color
+plt.plot(ypts, marker='o:r') // o-marker, :-dotted_line, r-red_color
+
+//marker size
+plt.plot(ypts, marker='o-y' ms=20)
+
+//marker edge color (mec)
+plt.plot(ypts, marker='o-b' ms=20, mec=r)
+
+//marker face color (mfc)
+plt.plot(ypts, marker='*-b' ms=20, mec='r', mfc='r')
+
+//linestyle or ls
+plot.plot(ypts, ls = 'dotted')
+
+//linewidth or linewidth
+plt.plot(ypts, lw=20.5)
+
+//labels & title
+plt.xlabel('average pulse')
+ptl.ylabel('calorie range')
+plt.title('sports watch data')
+
+//grid
+
+plt.grid()
+ptt.grid(axis='x')
+plt.grid(axis='y')

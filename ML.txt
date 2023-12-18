@@ -1,0 +1,137 @@
+// numpy
+It is a python library used for working with arrays
+It is 50x faster than traditional python lists
+Array obj in numpy is called ndarray
+
+//code
+import numpy as np
+arr = np.array([1, 2, 3, 4, 5])
+print(arr) >> [1, 2, 3, 4, 5]
+
+//to check varsion
+print(np.__version__)
+
+arr = np.array(23)
+//every element in an array is a 0-D array
+
+// 'ndim' atrribute returns the dimension of an array
+arr = np.array([12])
+print(arr.ndim) >> 0
+
+arr = np.array([1, 2])
+print(arr.ndim) >> 1
+
+arr = np.array([[1,2,3,4,5], [6,7,8,9,10]])
+print('2nd element of the first row', arr[0, 1])
+
+//array slicing
+arr = np.array([1, 2, 3, 4, 5])
+print(arr[1, 4]) >> [2, 3, 4] // index 4 is excluded
+
+arr[1:] >> elements from index 1 to end of arr
+arr[:3] >> elements from index 0 to 2 (3 excluded)
+
+arr[1:5:2] // 2 is the step of slicing
+for arr[1, 2, 3, 4, 5 ] >> [2, 4]
+
+arr[::2] //take only second step element
+arr[1, 2, 3, 4, 5, 6, 7] >> [1, 3, 5, 7]
+
+arr2d = np.array([1, 2, 3, 4, 5], [6,7,8,9,10])
+arr[1, 1:4] >> [7, 8, 9] // index 1 to 4 from first row
+arr[0:2, 2] >> [3, 8] // 2nd element from 1st and 2nd row
+arr[0:2, 1:4] >> [[2, 3, 4], [7, 8, 9]] // from both rows slice 1 to 4
+
+print(arr.dtype) >> int64
+
+
+//copy() function
+arr = [1, 2, 3]
+x = arr.copy()
+
+print(x) >> [1, 2, 3]
+
+//view() function
+arr = [1, 2, 4]
+x = arr.view()
+arr[0] = 10
+print(arr) >> [10, 2, 4]
+print(x) >> [10, 2, 4]
+
+//shape atrribute
+arr = [[1, 2, 3, 4], [5, 6, 7, 8]]
+print(arr.shape) >> (2, 4) //2 rows and 4 columns
+
+======================================================
+
+//pandas
+It is a python library used to work with datasets
+Pandas is "Python Data Analysis"
+
+import pandas as pd
+
+//DataFrame() function
+it is used to represent datasets in rows and columns
+
+//Series
+It is like a column in table
+
+a = [1, 7, 2]
+myvar = pd.Series(a)
+print(myvar) >> 0    1
+                1    7
+                2    2
+                dtype: int64
+
+myvar = pd.Series(a, index=['x', 'y', 'z'])
+
+print(myvar) >> import pandas as pd
+
+​
+
+a = [1, 7, 2]
+
+​
+
+myvar = pd.Series(a, index = ["x", "y", "z"])
+
+​
+
+print(myvar)
+
+V
+V
+
+x    1
+y    7
+z    2
+dtype: int64
+
+//Dataframe()
+data = {
+  "calories": [420, 380, 390],
+  "duration": [50, 40, 45]
+}
+
+#load data into a DataFrame object:
+df = pd.DataFrame(data)
+
+print(df)    calories  duration
+            0       420        50
+            1       380        40
+            2       390        45
+
+// 'loc' attr is used to return one or more specified rows
+
+print(df.loc[0]) >> 
+  calories    420
+  duration     50
+  Name: 0, dtype: int64
+
+
+
+
+
+
+
+
